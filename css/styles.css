@@ -173,3 +173,41 @@ section#menu-area {
         width: 50%;
     }
 }
+
+/*--About Page --*/
+.about{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.7)), url('../images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: auto;
+}
+
+.about h1 {
+    font-size: 48px;
+    font-family: 'Send Flowers', cursive;
+    color: azure;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.about p {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.about .mission{
+    position: relative;
+    text-align: center;
+    padding: 10px;
+
+}
