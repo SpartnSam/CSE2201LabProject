@@ -2,53 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <!--- CSS Stylesheets--->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cake N' Bake</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>
-                <a href="index.html">
-                    <img src="images/logo.png" alt="logo">
-                </a>
-            </h1>
+
+    <header class="header">
+
+        <nav>
+            <a href=""><img src="images/cake.png" alt="" class="logo"></a>
+            <div class="nav-items" id="nav-items">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Deliveries</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+
+        <div class="header-text-area">  
+            <h1 class="heading-text">Welcome To Cake 'N Bake</h1>
+            <a href="" class="header-btn">View Menu</a>
         </div>
 
-        <div class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </div>
+    </header>
 
-        <div class="content">
-            <h2>Login</h2>
-            <form action="login.php" method="post">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username">
-                <br>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
-                <br>
-                <input type="submit" value="Login">
-            </form>
-        </div>
+    <section id="menu-area">
+        <h4 class="heading-text">Lorem Ipsum</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eius saepe iusto, illum possimus eos a officia sed veritatis maxime earum quasi eligendi officiis dolorem inventore est odio blanditiis ipsam?</p>
+    </section>
 
-        <div class="footer">
-            <p>&copy; 2019</p>
-        </div>
+    <script>
+        
 
+        let navigationLinks = document.getElementById("nav-items");
+
+        function openMenu() {
+            navigationLinks.style.right = "0";
+        }
+
+        function closeMenu() {
+            navigationLinks.style.right = "-250px";
+        }
+
+    </script>
 </body>
-
-
-
-
 </html>
