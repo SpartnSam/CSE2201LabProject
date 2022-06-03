@@ -220,9 +220,11 @@ section#menu-area {
     border-radius: 50%;
     max-width: 100%;
     height: 300px;
+    transition: width 2s, height 4s;
 
 }
 
 .about img:hover {
-    transform: scaleX(-1);
+    width: 500px;
+    height: 500px;
   }
