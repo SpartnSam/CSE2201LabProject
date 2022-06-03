@@ -217,14 +217,15 @@ section#menu-area {
     margin-left: auto;
     margin-right: auto;
     width: 300px;
-    border-radius: 50%;
+    border-radius: 15px 50px;
     max-width: 100%;
-    height: 300px;
-    transition: width 2s, height 4s;
+    height: 200px;
+    transition: width 2s, height 3s;
+    padding: 5px;
 
 }
 
 .about img:hover {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 400px;
   }
