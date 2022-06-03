@@ -102,13 +102,14 @@ nav img {
     border-radius: 6px;
     position: relative;
     cursor:pointer;
+    transition: 2s ease-out;
 }
 
 .header-btn:hover {
     border: 1px solid var(--rich-black);
     background: var(--rich-black);
     color: white;
-    transition: 1.1s;
+    transition: 2s ease-out;
 }
 
 nav .fa-solid {
@@ -127,7 +128,7 @@ section#menu-area {
 
 @media(max-width:700px) {
     .header-text-area h1 {
-        font-size: 25px;
+        font-size: 36px;
     } 
     
     .nav-items ul li {

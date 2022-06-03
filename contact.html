@@ -4,7 +4,8 @@
 <head>
     <title>Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- Internal CSS-->
@@ -53,7 +54,7 @@
         .section textarea {
             border: 2px solid #f0f0f0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            border-radius: 0px;
+            border-radius: 6px;
             display: block;
             font-family: inherit;
             font-size: 25px;
@@ -64,8 +65,7 @@
         .section input:focus,
         .section textarea:focus {
             outline: 0;
-            border: none;
-            border-color: rgb(153, 105, 105);
+            border-color: #ec757b;
         }
 
         .section.success input,
@@ -114,14 +114,14 @@
             color: Black;
             font-size: 25px;
             padding: 10px 0;
-
+            border-radius: 6px;
             width: 100%;
             transition: 2s ease-out;
         }
 
         .form button:hover,
         .form button:focus {
-            background-color: black;
+            background-color: #ec757b;
             color: white;
         }
     </style>
@@ -129,15 +129,41 @@
 </head>
 
 <body>
+    <header class="header" style="min-height: 70vh; background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.7)), url('../images/contact-banner.jpg');">
+
+        <nav>
+            <a href="index.hml"><img src="images/cake.png" alt="" class="logo"></a>
+            <div class="nav-items" id="nav-items">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <ul>
+                    <b><li><a href="index.html">Home</a></li></b>
+                    <b><li><a href="">About</a></li></b>
+                    <b><li><a href="contact.html">Contact</a></li></b>
+                    <b><li><a href="">Reservation</a></li></b>
+                    <b><li><a href="">Products</a></li></b>
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+
+        <div class="header-text-area"> 
+            <h1 class="heading-text">Contact Us</h1>
+        </div>
+
+    </header>
+
     <div class="contact">
 
         <div class="inner">
 
             <!-- Inline CSS -->
+            <!---
             <h2 style="text-align: center; font-size:55px; ">Contact</h2>
             <p style="text-align: center; font-size:larger;">Visit at Georgetown, Guyana or call us at 592-123-1234 </p>
-            
-            <p class="text">MAKE A RESERVATION</p>
+            -->
+
+            <h1 style="font-size: 48px; margin-bottom: 1rem; font-weight: 100">Book Your Reservation</h1>
 
             <form id="form" class="form" method="post">
 
@@ -163,7 +189,7 @@
                 </div>
 
                 <div class="section">
-                    <input type="number" placeholder="Amount of persons" id="quantity" name="quantity" min="1" max="10">
+                    <input type="number" placeholder="Number of People" id="quantity" name="quantity" min="1" max="10">
                     <small>Error message</small>
                 </div>
 
@@ -187,7 +213,7 @@
             </form>
         </div>
     </div>
-
+    <script src="js/nav.js"></script>
     <!-- Internal JavaScript -->
     <script>
         const form = document.getElementById('form');
