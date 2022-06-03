@@ -80,14 +80,10 @@ nav img {
     text-align: center;
 }
 
-.header-text-area h1 {
-    font-size: 48px;
-    font-family: 'Send Flowers', cursive;
-    margin-bottom: 1rem;
-}
+
 
 .heading-text {
-    font-size: 48px;
+    font-size: 48px !important;
     font-family: 'Send Flowers', cursive;
     margin-bottom: 1rem;   
 }
