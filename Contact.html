@@ -1,0 +1,257 @@
+<html>
+   <head>
+       <title>Contact</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script> 
+        function validateForm()                                    
+{ 
+    var name = document.forms["contact_us"]["name"];      
+    var email = document.forms["contact_us"]["email"];    
+    var message = document.forms["contact_us"]["message"];   
+   
+    if (name.value == "")                                  
+    { 
+        document.getElementById('error_name').innerHTML="Please enter your full name";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('error_name').innerHTML="";  
+    }
+         if (name.value == "0","1","2","3","4","5","6","7","8","9")                                  
+    { 
+        document.getElementById('error_name').innerHTML="Please enter a valid name";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('error_name').innerHTML="";  
+    }
+    if (email.value == "")                                   
+    { 
+        document.getElementById('error_email').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    }else{
+        document.getElementById('error_email').innerHTML="";  
+    }
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        document.getElementById('error_email').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        document.getElementById('error_email').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (message.value == "")                           
+    {
+        document.getElementById('errormsg').innerHTML="Please enter a message"; 
+        message.focus(); 
+        return false; 
+    }else{
+        document.getElementById('error_msg').innerHTML="";  
+    }
+   
+    return true; 
+}
+      </script> 
+      <style>
+         h1{
+          text-align: center;
+          font-size: 60px;
+          font-family:'Brush Script MT', cursive;
+          background: #EADED6;
+        }
+        .form-style {
+          margin:10px auto;
+          width: 400px;
+          padding: 20px 12px 10px 20px;
+          font: 16px "Monsterrat", sans-serif;
+        }
+        .form-style td {
+          padding: 0;
+          display: block;
+          margin: 10px 0 0 0;
+        }
+        .form-style label{
+          margin:0 0 3px 0;
+          padding:0px;
+          display:block;
+          font-weight: bold;
+        }
+        .form-style .required{
+          color:red;
+        }
+        .form-style input[type=submit], .form-style input[type=reset]{
+          background: #f14e6c;
+          padding: 8px 15px 8px 15px;
+          border: #f14e6c;
+          color: #fff;
+        }
+        .form-style input[type=reset]{
+          background: #f14e6c;
+          padding: 8px 15px 8px 15px;
+          border: #f14e6c;
+          color: #fff;
+        }
+        .form-style input[type=reset]:hover{
+          background: #db0404;
+          box-shadow:none;
+          -moz-box-shadow:none;
+          -webkit-box-shadow:none;
+        }
+        .form-style input[type=submit]:hover{
+          background: #06c93a;
+          box-shadow:none;
+          -moz-box-shadow:none;
+          -webkit-box-shadow:none;
+        }
+        .form-style .field-textarea{
+          height: 150px;
+        }
+        .form-style input[type=text], 
+        .form-style input[type=email],
+        textarea{
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          border:2px solid #757171;
+          padding: 8px;
+          margin:0px;
+          -webkit-transition: all 0.30s ease-in-out;
+          -moz-transition: all 0.30s ease-in-out;
+          -ms-transition: all 0.30s ease-in-out;
+          -o-transition: all 0.30s ease-in-out;
+          outline: none;  
+        }
+        .form-style .long{
+          width: 100%;
+        }
+        .form-style input[type=text]:focus, 
+        .form-style input[type=email]:focus,
+        .form-style textarea:focus{
+          -moz-box-shadow: 0 0 8px #88e9ba;
+          -webkit-box-shadow: 0 0 8px #88e9ba;
+          box-shadow: 0 0 8px #88e9ba;
+          border: 1px solid #88e9ba;
+        }
+        .error{
+          color: #e74c3c;
+          background-color: #FFBABA;
+        }
+      </style>
+   </head>
+   <body>
+   <header class="header" style="min-height: 70vh; background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.7)), url('./images/contact-banner.jpg');">
+
+        <nav>
+            <a href="index.html"><img src="images/cake.png" alt="" class="logo"></a>
+            <div class="nav-items" id="nav-items">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <ul>
+                    <b><li><a href="index.html">Home</a></li></b>
+                    <b><li><a href="index.html#about">About</a></li></b>
+                    <b><li><a href="#">Contact</a></li></b>
+                    <b><li><a href="reservations.html">Reservations</a></li></b>
+                    <b><li><a href="">Products</a></li></b>
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+
+        <div class="header-text-area"> 
+        </div>
+
+    </header>
+
+      <h1>Contact Us</h1>
+      <form name="contact_us" action="/file.php" onsubmit="return validateForm()" method="post">
+         <table class="form-style">
+            <tr>
+               <td>
+                  <label>
+                     Your Full Name <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <input type="text" name="name" placeholder="Kate Ray" class="long"/>
+                  <span class="error" id="error_name"></span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>
+                    Your Email Address <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <input type="email" name="email" placeholder="someone@gmail.com" class="long"/>
+                  <span class="error" id="error_email"></span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>
+                     Message <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <textarea name="message" placeholder="Enter your message"class="long field-textarea"></textarea>
+                  <span class="error" id="error_msg"></span>
+               </td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>
+                  <input type="submit" value="Send">      
+                  <input type="reset" value="Reset"> 
+               </td>
+            </tr>
+         </table>
+      </form>
+          <footer class="footer">
+
+        <div class="box-container">
+    
+            <div class="box">
+                <h3> Cake 'N Bake</h3>
+                <p style="margin-bottom: 1rem;">Make sure to check us out on social media!</p>
+                <div class="share">
+                    <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://www.twitter.com" class="fab fa-twitter" target="_blank"></a>
+                    <a href="https://www.instagram.com" class="fab fa-instagram" target="_blank"></a>
+                    <a href="https://www.snapchat.com" class="fab fa-snapchat" target="_blank"></a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h3>Contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="#" class="links"> <i class="fas fa-mobile"></i> +666-666-6666 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> cakenbake@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Georgetown, Guyana - 31128 </a>
+            </div>
+    
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Home </a>
+                <a href="index.html#about" class="links"> <i class="fas fa-arrow-right"></i> About </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Contact </a>
+                <a href="reservations.html" class="links"> <i class="fas fa-arrow-right"></i> Reservation </a>
+                <a href="index.html#menu-area" class="links"> <i class="fas fa-arrow-right"></i> Products </a>
+            </div>
+    
+        </div>
+    <!------ FOOTER END-->
+    </footer>
+   </body>
+</html>
