@@ -34,10 +34,7 @@ nav {
     padding:2% 6%;
     justify-content: space-between;
     align-items: center;
-    position:fixed;
-    background: black;
-    opacity: 0.6;
-}
+    }
 
 nav img {
     width: 50px;
