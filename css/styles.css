@@ -15,6 +15,7 @@
     font-family:'Monsterrat', sans-serif;
     font-size: 16px;
     letter-spacing: 0.1rem;
+    overflow-x: hidden;
 }
 
 .header {
