@@ -204,6 +204,9 @@ section#menu-area {
     position: relative;
     text-align: center;
     padding: 10px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
