@@ -83,7 +83,7 @@ nav img {
 
 
 .heading-text {
-    font-size: 54px !important;
+    font-size: 60px !important;
     font-family: 'Brush Script MT',cursive;
     margin-bottom: 1rem;   
 }
@@ -185,8 +185,8 @@ section#menu-area {
 }
 
 .about h1 {
-    font-size: 48px;
-    font-family: 'Send Flowers', cursive;
+    font-size: 60px;
+    font-family: 'Brush Script MT', cursive;
     color: azure;
     margin-bottom: 1rem;
     position: relative;
