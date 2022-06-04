@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Send+Flowers&display=swap');
 
 :root {
-    --watermelon: #ec757b;
+    --watermelon: #e74c3c;
     --peach: #F79F92;
-    --light-pink: #FCCFBF;
     --sky-blue: #8CC0DE;
     --light-gray: #EADED6;
     --chocolate: #564C45;
@@ -14,6 +13,7 @@
     margin: 0;
     padding: 0;
     font-family:'Monsterrat', sans-serif;
+    font-size: 16px;
     letter-spacing: 0.1rem;
 }
 
@@ -79,8 +79,6 @@ nav img {
     transform: translate(-50%,-50%);
     text-align: center;
 }
-
-
 
 .heading-text {
     font-size: 60px !important;
@@ -194,7 +192,7 @@ section#menu-area {
 }
 
 .about p {
-    font-size: 24px;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     color: white;
     margin-bottom: 1rem;
@@ -225,4 +223,60 @@ section#menu-area {
 .about img:hover {
     width: 600px;
     height: 400px;
-  }
+}
+
+/* Footer */
+.footer{
+    background: #fff;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.footer .box-container .box h3{
+    font-size: 1.5rem;
+    color:var(--rich-black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box h3 i{
+    color:var(--watermelon);
+}
+
+.footer .box-container .box .links{
+    display: block;
+    color:var(--rich-black);
+}
+
+.footer .box-container .box .links i{
+    color: var(--watermelon);
+    padding-right: 1.5rem;
+}
+
+.footer .box-container .box .links:hover i {
+    padding-right: 2rem;
+}
+
+.footer .box-container .box .share a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    color:var(--rich-black);
+    margin-right: .2rem;
+    background: #eee;
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.footer .box-container .box .share a:hover{
+    background: var(--watermelon);
+    color: #fff;
+}
